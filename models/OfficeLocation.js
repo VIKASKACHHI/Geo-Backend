@@ -14,3 +14,4 @@ const OfficeLocationSchema = new mongoose.Schema({
 // ✅ Ensure correct ES Module export
 const OfficeLocation = mongoose.model('OfficeLocation', OfficeLocationSchema, 'office_locations');
 export default OfficeLocation;
+//end 
