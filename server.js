@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGO_URI, {
 // Register API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/attendance', attendanceRoutes);
-app.use('/api/office_location', officeRoutes);
+app.use('/api/office-location', officeRoutes);
 
 // Add a route handler for the root path
 app.get('/', (req, res) => {
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
         endpoints: {
             auth: '/api/auth',
             attendance: '/api/attendance',
-            officeLocation: '/api/office-location'
+            officeLocation: '/api/office_locations'
         }
     });
 });

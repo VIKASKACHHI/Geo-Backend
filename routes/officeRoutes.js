@@ -10,7 +10,12 @@ import { verifyToken } from './auth.js';
  */
 router.get('/', async (req, res) => {
   try {
-    const officeLocations = await OfficeLocation.find({ isActive: true });
+    const officeLocations = await OfficeLocation.find({ 
+      $or: [
+        { isActive: { $ne: false } },
+        { isActive: { $exists: false } }
+      ]
+    });
     res.json(officeLocations);
   } catch (error) {
     console.error('Error fetching office locations:', error);
