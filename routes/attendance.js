@@ -7,7 +7,7 @@ import { isWithinRadius } from '../utils/geoUtils.js';
 
 const router = express.Router();
 
-
+// Import the User model
 /**
  * @route   POST /api/attendance/check-in
  * @desc    Employee check-in with location verification
